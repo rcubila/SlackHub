@@ -1,0 +1,19 @@
+div {
+  height: 90vh;
+}
+.activeUser {
+  height: 100%;
+  width: 105%;
+}
+
+.activeChat {
+  height: 90%;
+  width: 100%;
+  overflow: auto;
+}
+
+.postToActiveChat {
+  height: 10%;
+}
+
+

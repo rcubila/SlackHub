@@ -1,0 +1,103 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ng2-emojify",
+        "scope": null,
+        "escapedName": "ng2-emojify",
+        "name": "ng2-emojify",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\srvsingh\\data\\saurav\\a2-plugin"
+    ]
+  ],
+  "_from": "ng2-emojify@^2.0.7",
+  "_id": "ng2-emojify@2.0.7",
+  "_inBundle": false,
+  "_inCache": true,
+  "_integrity": "sha1-y6Hd88oT6S6UBHkvD824b7JW3w0=",
+  "_location": "/ng2-emojify",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ng2-emojify-1.0.17.tgz_1485351027935_0.28371190116740763"
+  },
+  "_npmUser": {
+    "name": "sauravgaursmith",
+    "email": "saurav.gaur011@gmail.com"
+  },
+  "_npmVersion": "4.0.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "ng2-emojify@^2.0.7",
+    "name": "ng2-emojify",
+    "escapedName": "ng2-emojify",
+    "rawSpec": "^2.0.7",
+    "saveSpec": null,
+    "fetchSpec": "^2.0.7"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng2-emojify/-/ng2-emojify-2.0.7.tgz",
+  "_shasum": "cba1ddf3ca13e92e9404792f0fcdb86fb256df0d",
+  "_shrinkwrap": null,
+  "_spec": "ng2-emojify@^2.0.7",
+  "_where": "/Users/raul/dev/slackTeamProject/SlackHub",
+  "author": {
+    "name": "Saurav Singh",
+    "email": "saurav.gaur011@gmail.com",
+    "url": "https://github.com/sauravgaursmith"
+  },
+  "bugs": {
+    "url": "https://github.com/sauravgaursmith/ng2-emojify/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "An angular 2 module to support built-in and custom emoji ",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "fa69065bfd0b86f8a762a7dab8a1e03012864865",
+    "tarball": "https://registry.npmjs.org/ng2-emojify/-/ng2-emojify-1.0.17.tgz"
+  },
+  "gitHead": "dd0c077c8518984561cab3d1e0636c03dce520d5",
+  "homepage": "https://github.com/sauravgaursmith/ng2-emojify#readme",
+  "keywords": [
+    "emoji",
+    "emojify",
+    "emotion",
+    "angular",
+    "chat",
+    "application",
+    "emo",
+    "built-in",
+    "custom",
+    "ng2",
+    "ng2-emojify"
+  ],
+  "license": "MIT",
+  "main": "ng2-emojify.js",
+  "maintainers": [
+    {
+      "name": "sauravgaursmith",
+      "email": "saurav.gaur011@gmail.com"
+    }
+  ],
+  "name": "ng2-emojify",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sauravgaursmith/ng2-emojify.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.7"
+}
