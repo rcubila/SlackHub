@@ -18,6 +18,7 @@ import {MenuDataService} from "./ng2-emojify/lib/services/menu-data.service";
 import {EmotionService} from "./ng2-emojify/lib/services/emotion.service";
 import {CustomEmotionService} from "./ng2-emojify/lib/services/custom-emotion.service";
 import { EmotionMenuDirective } from './ng2-emojify/lib/emotion-menu.directive';
+import { EmojiComponent } from './emoji/emoji.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EmotionMenuDirective } from './ng2-emojify/lib/emotion-menu.directive';
     MessageComponent,
     Ng2EmojifyComponent,
     EmojifyPipe,
-    EmotionMenuDirective
+    EmotionMenuDirective,
+    EmojiComponent
 
   ],
   imports: [
@@ -40,7 +42,8 @@ import { EmotionMenuDirective } from './ng2-emojify/lib/emotion-menu.directive';
   providers: [ChatService,
     MenuDataService,
     EmotionService,
-    CustomEmotionService],
+    CustomEmotionService
+  ],
 
   exports:[
     EmotionMenuDirective,

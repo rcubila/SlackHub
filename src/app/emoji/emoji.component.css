@@ -1,0 +1,21 @@
+
+.emoji__dropdown {
+  top: 0;
+  transform: translateY(-100%) translateX(-100%);
+  left: 100%;
+}
+
+.emoji__container {
+  max-width: 125px;
+}
+
+  .emoji__container a {
+    white-space: normal;
+  }
+
+
+.emoji__item {
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+}
