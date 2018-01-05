@@ -8,11 +8,11 @@ import {Observable} from "rxjs/Observable";
 
 
 @Injectable()
-export class Emoji2Service {
+export class EmojiService {
   constructor(private http: Http) {
   }
 
-  getEmoji2(): Observable<any> {
+  getEmoji(): Observable<any> {
     return this.http.get("http://localhost:8080/emoji2")
       .map(res => res.json());
   }

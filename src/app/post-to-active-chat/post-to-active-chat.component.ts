@@ -18,4 +18,8 @@ export class PostToActiveChatComponent {
     this._chatService.addMessage(input.value);
     input.value = "";
   }
+
+  emojiClicked(input, code) {
+    input.value += ' ' + code;
+  }
 }

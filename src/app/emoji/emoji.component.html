@@ -1,21 +1,14 @@
 
-
 <span class="input-group-btn rounded dropup {{getOpen() ? 'show' : ''}}" style="background-color: dimgray">
+
   <button type="button" class="btn btn-default dropdown-toggle" (click)="toggle()">Emo!<span class="caret"></span></button>
 
   <div class="dropdown-menu {{getOpen() ? 'show' : ''}} emoji__dropdown">
-
-    <!--
-     1. add search input
-     2. call api in the backend (ajax), backend returns emojis that matched
-     -->
-
     <div class="emoji__container">
-      <a href="#" *ngFor="let emoji of emojis()">
-        <img src="{{emoji.url}}" title="{{emoji.key}}" class="emoji__item"/>
+      <a href="#" *ngFor="let e of emoji">
+        <a href="#" title="{{e.key}}" (click)="onEmojiClicked(e.code)">{{e.code}}</a>
       </a>
     </div>
-
   </div>
 </span>
 

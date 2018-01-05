@@ -19,8 +19,7 @@ import {CustomEmotionService} from "./ng2-emojify/lib/services/custom-emotion.se
 import { EmotionMenuDirective } from './ng2-emojify/lib/emotion-menu.directive';
 import { EmojiComponent } from './emoji/emoji.component';
 import { JokesComponent } from './jokes/jokes.component';
-import { Emoji2Component } from './emoji2/emoji2.component';
-import {Emoji2Service} from "./service/emoji2.service";
+import {EmojiService} from "./service/emoji.service";
 
 @NgModule({
   declarations: [
@@ -34,9 +33,6 @@ import {Emoji2Service} from "./service/emoji2.service";
     EmotionMenuDirective,
     EmojiComponent,
     JokesComponent,
-    Emoji2Component,
-
-
   ],
   imports: [
     BrowserModule,
@@ -49,15 +45,13 @@ import {Emoji2Service} from "./service/emoji2.service";
     EmotionService,
     CustomEmotionService,
     JokeService,
-    Emoji2Service
+    EmojiService
   ],
-
   exports:[
     EmotionMenuDirective,
     EmojifyPipe,
     Ng2EmojifyComponent
   ],
-
 
   bootstrap: [AppComponent]
 })

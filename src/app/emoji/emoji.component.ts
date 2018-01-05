@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {EmojiService} from "../service/emoji.service";
 
 @Component({
   selector: 'app-emoji',
@@ -8,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class EmojiComponent implements OnInit {
   open: boolean = false;
 
-  constructor() {
-  }
+  emoji = [];
 
-  ngOnInit() {
+  @Output() emojiClicked: EventEmitter<any> = new EventEmitter();
+
+  constructor(private emojiService: EmojiService) {
   }
 
   getOpen() {
@@ -22,18 +24,27 @@ export class EmojiComponent implements OnInit {
     this.open = !this.open;
   }
 
-  emojis() {
-    return [
-      {key: "+1", url: "https://github.global.ssl.fastly.net/images/icons/emoji/+1.png?v5"},
-      {key: "-1", url: "https://github.global.ssl.fastly.net/images/icons/emoji/-1.png?v5"},
-      {key: "100", url: "https://github.global.ssl.fastly.net/images/icons/emoji/100.png?v5"},
-      {key: "1234", url: "https://github.global.ssl.fastly.net/images/icons/emoji/1234.png?v5"},
-      {key: "8ball", url: "https://github.global.ssl.fastly.net/images/icons/emoji/8ball.png?v5"},
-      {key: "a", url: "https://github.global.ssl.fastly.net/images/icons/emoji/a.png?v5"},
-      {key: "ab", url: "https://github.global.ssl.fastly.net/images/icons/emoji/ab.png?v5"}
-    ];
+  getEmoji(){
+    this.emojiService.getEmoji()
+      .subscribe(result => {
+        this.emoji = this.parseEmojis(result.emojiMap);
+      })
+  }
+
+  parseEmojis(emoji) {
+    let result = [];
+    for (let key in emoji) {
+      result.push({key, code: emoji[key]});
+    }
+    return result;
   }
 
 
+  ngOnInit() {
+    this.getEmoji();
+  }
 
+  onEmojiClicked(code): void {
+    this.emojiClicked.emit([code]);
+  }
 }
