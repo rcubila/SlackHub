@@ -1,4 +1,6 @@
-<div [ngStyle]="emotionMenuCss" id="app-emogi-menu">
+<!--<div [ngStyle]="emotionMenuCss" id="app-emogi-menu">-->
+
+<div class="Emojis">
   <div [ngStyle]="emotionContainerCss" *ngFor="let image of images" (click)="setImageInformation(image)">
 
     <div [innerHTML]="message | emojify"></div>
@@ -7,4 +9,10 @@
       <img src="{{image.emojiUrl}}" [ngStyle]="emotionImageCss" class="app-emogi-image" title="{{image.title}}">
     </span>
   </div>
+
+  <button type="button" (click)="editing()" class="btn btn-success">Emojis</button>
+
+
+
+
 </div>

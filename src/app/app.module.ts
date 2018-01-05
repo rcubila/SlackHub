@@ -8,9 +8,8 @@ import { ActiveUserComponent } from './active-user/active-user.component';
 import { PostToActiveChatComponent } from './post-to-active-chat/post-to-active-chat.component';
 import { HttpModule } from '@angular/http';
 import { MessageComponent } from './message/message.component';
-//import {Ng2EmojifyModule} from './ng2-emojify';
 
-
+import { JokeService } from './service/joke.service';
 import {CommonModule} from '@angular/common';
 import {Ng2EmojifyComponent} from "./ng2-emojify/lib/ng2-emojify.component";
 import {EmojifyPipe} from './ng2-emojify/lib/emojify.pipe';
@@ -19,6 +18,9 @@ import {EmotionService} from "./ng2-emojify/lib/services/emotion.service";
 import {CustomEmotionService} from "./ng2-emojify/lib/services/custom-emotion.service";
 import { EmotionMenuDirective } from './ng2-emojify/lib/emotion-menu.directive';
 import { EmojiComponent } from './emoji/emoji.component';
+import { JokesComponent } from './jokes/jokes.component';
+import { Emoji2Component } from './emoji2/emoji2.component';
+import {Emoji2Service} from "./service/emoji2.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { EmojiComponent } from './emoji/emoji.component';
     Ng2EmojifyComponent,
     EmojifyPipe,
     EmotionMenuDirective,
-    EmojiComponent
+    EmojiComponent,
+    JokesComponent,
+    Emoji2Component,
+
 
   ],
   imports: [
@@ -42,7 +47,9 @@ import { EmojiComponent } from './emoji/emoji.component';
   providers: [ChatService,
     MenuDataService,
     EmotionService,
-    CustomEmotionService
+    CustomEmotionService,
+    JokeService,
+    Emoji2Service
   ],
 
   exports:[
